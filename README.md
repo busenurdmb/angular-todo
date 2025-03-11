@@ -1,3 +1,88 @@
+# ✅ Angular Todo List 🚀
+
+Bu proje, **Angular** kullanılarak oluşturulmuş bir **Görev Yönetim (Todo List) Uygulamasıdır**.  
+Kullanıcılar görev ekleyebilir, silebilir ve düzenleyebilir. **LocalStorage** desteği sayesinde veriler tarayıcıda saklanır.  
+
+---
+# 📸 Proje Önizlemesi
+
+Bu proje aşağıdaki gibi görünmektedir:
+
+![Todo List Önizleme](https://github.com/busenurdmb/angular-todo/blob/main/src/assets/ProjectImage/todo1.png)
+
+## 🎯 **Özellikler**
+✅ **Görev Ekleme** – Yeni görevleri hızlıca ekleyin.  
+❌ **Görev Silme** – Tamamlanmış veya gereksiz görevleri kaldırın.  
+✏️ **Görev Güncelleme** – Görevleri kolayca düzenleyin.  
+📌 **LocalStorage Desteği** – Sayfa yenilendiğinde görevler kaybolmaz.  
+🎨 **Modern & Şık Tasarım** – Kullanıcı dostu ve minimalist arayüz.  
+🌙 **Karanlık Mod** – Açık/Koyu tema seçeneği ile kişiselleştirin.  
+☑️ **Görev Tamamlama** – Yapılan görevleri işaretleyerek tamamlanmış olarak kaydedin.  
+📅 **Sıralama Seçenekleri** – Görevleri eklenme tarihi veya son teslim tarihine göre sıralayın.  
+
+---
+# 📸 Proje Önizlemesi
+
+Bu proje aşağıdaki gibi görünmektedir:
+
+![Todo List Önizleme](https://github.com/busenurdmb/angular-todo/blob/main/src/assets/ProjectImage/todo2.png)
+![Todo List Önizleme](https://github.com/busenurdmb/angular-todo/blob/main/src/assets/ProjectImage/todo3.png)
+![Todo List Önizleme](https://github.com/busenurdmb/angular-todo/blob/main/src/assets/ProjectImage/todo4.png)
+![Todo List Önizleme](https://github.com/busenurdmb/angular-todo/blob/main/src/assets/ProjectImage/todo5.png)
+
+## 📁 **Proje Dosya Yapısı ve Açıklamaları**
+---
+angular-todo/
+- │── 📦 node_modules/ → Proje bağımlılıkları (otomatik oluşturulur)
+- │── 📂 src/ → Projenin asıl kodları burada!
+- │ ├── 📂 app/ → Ana uygulama bileşenleri ve servisler burada!
+- │ │ ├── 🎯 app.component.ts → Ana bileşenin TypeScript kodu (iş mantığı)
+- │ │ ├── 🎨 app.component.html → Kullanıcı arayüzü
+- │ │ ├── 🎨 app.component.css → Stil dosyası
+- │ │ ├── 🏗️ app.module.ts → Modül tanımlamaları
+- │ ├── 📜 index.html → Ana HTML sayfası
+- │ ├── 🚀 main.ts → Angular başlangıç dosyası
+- │── ⚙️ angular.json → Yapılandırma ayarları
+- │── 📦 package.json → Proje bağımlılıkları
+- │── ⚙️ tsconfig.json → TypeScript ayarları
+
+
+📌 **Açıklamalar:**  
+- **app/** → Proje bileşenleri burada bulunur.  
+- **app.component.ts** → Ana bileşenin iş mantığını içerir.  
+- **app.component.html** → Kullanıcıya gösterilecek arayüz.  
+- **app.component.css** → Stil ve tasarım ayarları.  
+- **index.html** → Uygulamanın ana HTML dosyasıdır.  
+- **main.ts** → Angular uygulamasını başlatır.  
+- **theme.service.ts** → Karanlık mod özelliğini yönetir.  
+- **sorting.service.ts** → Görev sıralama mantığını yönetir.  
+
+---
+
+## 🔥 **Teknolojiler**
+✔️ Angular 17+  
+✔️ TypeScript  
+✔️ HTML & CSS  
+✔️ LocalStorage API  
+✔️ Karanlık Mod Desteği  
+✔️ Responsive UI  
+
+---
+---
+## 🚀 **Kurulum & Çalıştırma**
+Projeyi kendi bilgisayarınızda çalıştırmak için şu adımları takip edebilirsiniz:
+
+### 1️⃣ **Projeyi Klonlayın**
+```sh
+git clone https://github.com/busenurdmb/angular-todo.git
+cd angular-todo
+
+### 2️⃣ Bağımlılıkları Yükleyin
+```sh
+npm install
+###3️⃣ Projeyi Çalıştırın
+ng serve
+
 # AngularTodo
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.1.0.
