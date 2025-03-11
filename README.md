@@ -69,8 +69,7 @@ angular-todo/
 - **app.component.css** → Stil ve tasarım ayarları.  
 - **index.html** → Uygulamanın ana HTML dosyasıdır.  
 - **main.ts** → Angular uygulamasını başlatır.  
-- **theme.service.ts** → Karanlık mod özelliğini yönetir.  
-- **sorting.service.ts** → Görev sıralama mantığını yönetir.  
+ 
 
 ---
 
