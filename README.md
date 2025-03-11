@@ -4,6 +4,7 @@ Bu proje, **Angular** kullanılarak oluşturulmuş bir **Görev Yönetim (Todo L
 Kullanıcılar görev ekleyebilir, silebilir ve düzenleyebilir. **LocalStorage** desteği sayesinde veriler tarayıcıda saklanır.  
 
 ---
+
 # 📸 Proje Önizlemesi
 
 Bu proje aşağıdaki gibi görünmektedir:
@@ -21,6 +22,20 @@ Bu proje aşağıdaki gibi görünmektedir:
 📅 **Sıralama Seçenekleri** – Görevleri eklenme tarihi veya son teslim tarihine göre sıralayın.  
 
 ---
+## 🔥 **Teknolojiler**
+✔️ Angular 17+ – Google tarafından geliştirilen modern frontend framework'ü. Tek sayfa uygulamalar (SPA) geliştirmek için kullanılır.
+
+✔️ TypeScript – JavaScript'in güçlü ve tip güvenliği sağlayan süper seti. Hata ayıklamayı kolaylaştırır ve büyük projelerde kodun daha okunaklı olmasını sağlar.
+
+✔️ HTML & CSS – HTML ile sayfanın iskeleti oluşturulur, CSS ile tasarım yapılır. Proje şık ve kullanıcı dostu bir arayüze sahiptir.
+
+✔️ LocalStorage API – Kullanıcı verilerini tarayıcıda saklamaya yarar. Sayfa yenilense bile görevlerin kaybolmamasını sağlar.
+
+✔️ Karanlık Mod Desteği – Açık ve koyu tema seçeneği sunar. Kullanıcılar tercihlerine göre tema değiştirebilir.
+
+✔️ Responsive UI – Mobil ve masaüstü uyumlu esnek tasarım. Tüm cihazlarda düzgün görüntülenir ve kullanılabilir.
+
+----
 # 📸 Proje Önizlemesi
 
 Bu proje aşağıdaki gibi görünmektedir:
@@ -59,13 +74,7 @@ angular-todo/
 
 ---
 
-## 🔥 **Teknolojiler**
-✔️ Angular 17+  
-✔️ TypeScript  
-✔️ HTML & CSS  
-✔️ LocalStorage API  
-✔️ Karanlık Mod Desteği  
-✔️ Responsive UI  
+
 
 ---
 ---
