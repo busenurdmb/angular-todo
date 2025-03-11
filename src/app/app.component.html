@@ -1,24 +1,50 @@
 <!-- Sayfanın ana container'ı -->
-<div class="container">
+<div class="container" [class.dark-theme]="isDarkMode">
   <!-- Üst kısım: Başlık ve ikonlar -->
   <div class="header">
     <img src="assets/angular-logo.png" alt="Angular Logo" class="icon" />
     <img src="assets/html-logo.png" alt="HTML Logo" class="icon" />
     <img src="assets/css-logo.png" alt="CSS Logo" class="icon" />
     <h1>📒 Todo Defterim</h1>
+
+    <!-- Tema değiştirme butonu -->
+    <button class="theme-btn" (click)="toggleTheme()">
+      {{ isDarkMode ? "🌞 Açık Mod" : "🌙 Koyu Mod" }}
+    </button>
   </div>
 
   <!-- Görev ekleme alanı -->
   <div class="input-group">
     <input type="text" [(ngModel)]="newTask" placeholder="Yeni görev ekle..." />
+    <input type="date" [(ngModel)]="taskDueDate" />
     <button (click)="addTask()">Ekle</button>
+  </div>
+
+  <!-- Sıralama seçeneği -->
+  <!-- Sıralama seçeneği -->
+  <div class="sorting-group">
+    <label for="sortSelect">📅 Sırala:</label>
+    <select id="sortSelect" [(ngModel)]="sortBy" (change)="sortTasks()">
+      <option value="added">Eklenme Tarihine Göre</option>
+      <option value="due">Son Teslim Tarihine Göre</option>
+    </select>
   </div>
 
   <!-- Görev listesi -->
   <ul>
-    <li *ngFor="let task of tasks; let i = index">
+    <li
+      *ngFor="let task of tasks; let i = index"
+      [class.completed]="task.completed"
+    >
+      <!-- Checkbox ile tamamlandı işaretleme -->
+      <input
+        type="checkbox"
+        [checked]="task.completed"
+        (change)="toggleTaskCompleted(task)"
+      />
+
       <!-- Eğer düzenleme modunda değilse, metni göster -->
-      <span *ngIf="editingIndex !== i">{{ task }}</span>
+      <span *ngIf="editingIndex !== i">{{ task.title }}</span>
 
       <!-- Eğer düzenleme modundaysa, input kutusunu göster -->
       <input
@@ -26,6 +52,11 @@
         [(ngModel)]="editTaskText"
         class="edit-input"
       />
+
+      <!-- Görev tarihini göster -->
+      <span *ngIf="task.dueDate">
+        (Son tarih: {{ task.dueDate | date : "shortDate" }})</span
+      >
 
       <!-- Düzenleme butonu (Edit) -->
       <button class="edit-btn" (click)="editTask(i)" *ngIf="editingIndex !== i">

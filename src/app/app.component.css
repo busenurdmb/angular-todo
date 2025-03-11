@@ -1,6 +1,45 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap");
 
-/* Sayfanın ortalanması ve defter görünümü */
+/* 🌙 Koyu Tema */
+body.dark-theme {
+  background: #121212;
+  color: white;
+}
+
+.dark-theme .container {
+  background: #1e1e1e;
+  border-left: 10px solid #ff6b6b;
+  border-right: 10px solid #ff6b6b;
+}
+
+.dark-theme input,
+.dark-theme button {
+  background: #333;
+  color: white;
+  border: 2px solid #444;
+}
+
+.dark-theme ul {
+  background: #222;
+}
+
+.dark-theme li {
+  background: #2c2c2c;
+}
+
+.dark-theme .delete-btn {
+  background: linear-gradient(135deg, #ff4e7e, #ff758c);
+}
+
+.dark-theme .edit-btn {
+  background: linear-gradient(135deg, #3a86ff, #007bff);
+}
+
+.dark-theme .save-btn {
+  background: linear-gradient(135deg, #06d6a0, #28a745);
+}
+
+/* 📒 Defter Görünümü */
 .container {
   width: 400px;
   margin: 50px auto;
@@ -13,34 +52,27 @@
   position: relative;
 }
 
-/* Üst kısım: Başlık ve ikonlar */
+/* 🎨 Başlık ve Logolar */
 .header {
   text-align: center;
   margin-bottom: 20px;
 }
 
 .header h1 {
-  font-family: "Arial", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 24px;
   font-weight: bold;
   color: #333;
   margin: 10px 0;
 }
 
-/* Angular, HTML, CSS ikonları */
 .icon {
   width: 40px;
   height: 40px;
   margin: 0 5px;
 }
 
-h1::before {
-  /* content: "✅"; */
-  font-size: 30px;
-  margin-right: 10px;
-}
-
-/* Input alanı */
+/* ✨ Input Alanı */
 .input-group {
   display: flex;
   flex-direction: column;
@@ -78,7 +110,7 @@ h1::before {
   background: #218838;
 }
 
-/* Görev listesi */
+/* 📋 Görev Listesi */
 ul {
   list-style: none;
   padding: 0;
@@ -92,23 +124,49 @@ li {
   padding: 10px;
   margin: 10px 0;
   border-radius: 8px;
+  gap: 10px;
+  width: 100%;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Görev metni */
-li span {
-  font-size: 16px;
-  color: #333;
-  flex-grow: 1;
+/* 📌 Tamamlanmış Görevlerin Üstünü Çizme */
+.completed {
+  text-decoration: line-through;
+  opacity: 0.6;
 }
 
+/* 🎨 Görev Metni */
 .task-text {
   flex-grow: 1;
   text-align: left;
   padding-left: 10px;
   font-size: 16px;
+  min-width: 0; /* Genişleme sınırlarını yönet */
 }
 
+/* 🔘 Tamamla Butonu */
+.complete-btn {
+  background: linear-gradient(135deg, #06d6a0, #28a745);
+  border: none;
+  color: white;
+  padding: 8px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
+}
+
+.complete-btn:hover {
+  background: linear-gradient(135deg, #06b690, #218838);
+  transform: scale(1.1);
+}
+
+/* 🗑️ Silme Butonu */
 .delete-btn {
   background: linear-gradient(135deg, #ff758c, #ff7eb3);
   border: none;
@@ -123,61 +181,222 @@ li span {
   justify-content: center;
   width: 35px;
   height: 35px;
-  box-shadow: 0px 4px 8px rgba(255, 117, 140, 0.3);
 }
 
 .delete-btn:hover {
   background: linear-gradient(135deg, #ff5c75, #ff4e99);
   transform: scale(1.1);
-  box-shadow: 0px 6px 12px rgba(255, 92, 117, 0.4);
-}
-.edit-input {
-  width: 60%;
-  padding: 5px;
-  border: 2px solid linear-gradient(135deg, #8b0728, #e6e1e3);
-  border-radius: 5px;
-  font-size: 14px;
 }
 
+/* ✏️ Düzenleme Butonu */
 .edit-btn {
-  /* background: #007bff; */
+  background: linear-gradient(135deg, #3a86ff, #007bff);
   border-radius: 50%;
   color: white;
   padding: 5px 8px;
-
   cursor: pointer;
+}
+.edit-input {
+  flex-grow: 1; /* Düzenleme alanını metinle aynı hizaya getir */
+  min-width: 0;
+  padding: 5px;
+  border: 2px solid #d1d1d1;
+  border-radius: 5px;
+  font-size: 14px;
+  box-sizing: border-box; /* Padding'in genişliği etkilemesini engeller */
 }
 .edit-btn:hover {
-  background: linear-gradient(135deg, #635f60, #e6e1e3);
+  background: linear-gradient(135deg, #2979ff, #0066cc);
   transform: scale(1.1);
-  box-shadow: 0px 6px 12px rgba(255, 92, 117, 0.4);
 }
+
+/* 💾 Kaydetme Butonu */
 .save-btn {
-  /* background: #28a745; */
-  color: white;
-  padding: 5px 8px;
-  border-radius: 5px;
-  cursor: pointer;
-}
-.save-btn:hover {
-  background: linear-gradient(135deg, #e7e9e9, #eeeced);
-  transform: scale(1.1);
-  box-shadow: 0px 6px 12px rgba(255, 92, 117, 0.4);
-}
-.cancel-btn {
-  /* background: #ff6347; */
+  background: linear-gradient(135deg, #06d6a0, #28a745);
   color: white;
   padding: 5px 8px;
   border-radius: 5px;
   cursor: pointer;
 }
 
-/* .delete-btn {
-  background: linear-gradient(135deg, #ff758c, #ff7eb3);
+.save-btn:hover {
+  background: linear-gradient(135deg, #06b690, #218838);
+  transform: scale(1.1);
+}
+
+/* ❌ İptal Butonu */
+.cancel-btn {
+  background: linear-gradient(135deg, #ff6347, #ff4500);
+  color: white;
+  padding: 5px 8px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* 🌙 Tema Değiştirme Butonu */
+.theme-toggle {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: linear-gradient(135deg, #222, #444);
   color: white;
   padding: 8px;
   border-radius: 50%;
   cursor: pointer;
-  font-size: 16px;
   transition: 0.3s ease;
-} */
+}
+
+.theme-toggle:hover {
+  background: linear-gradient(135deg, #444, #666);
+  transform: scale(1.1);
+}
+
+/* 📅 Tarih Seçme */
+.date-picker {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.date-picker input {
+  border: 2px solid #d1d1d1;
+  padding: 5px;
+  border-radius: 5px;
+}
+/* 📅 Sıralama Alanı */
+.sort-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.sort-container label {
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+}
+
+.sort-container select {
+  padding: 8px;
+  border: 2px solid #d1d1d1;
+  border-radius: 5px;
+  font-size: 14px;
+  background: white;
+  cursor: pointer;
+  width: 180px; /* Genişliği artırıldı */
+}
+
+.sort-container select:focus {
+  border-color: #ff6b6b;
+  outline: none;
+}
+/* 📅 Sıralama Seçeneği Konteyneri */
+.sorting-group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px; /* Etiket ve dropdown arasındaki mesafeyi ayarlar */
+  margin-top: 10px;
+  width: 100%; /* Kapsayıcı genişliği tam olması için */
+}
+
+.sorting-group label {
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+  white-space: nowrap; /* Label taşmasın */
+}
+
+/* Dropdown'un hizalamasını ve genişliğini düzeltir */
+.sorting-group select {
+  padding: 8px 12px;
+  border: 2px solid #d1d1d1;
+  border-radius: 6px;
+  font-size: 14px;
+  background: white;
+  cursor: pointer;
+  width: 200px; /* Genişliği artırıldı */
+  max-width: 100%; /* Mobilde kayma olmasın */
+  text-align: left;
+}
+
+/* Dropdown focus (seçildiğinde) */
+.sorting-group select:focus {
+  border-color: #ff6b6b;
+  outline: none;
+}
+
+/* 📌 Koyu Tema İçin (Opsiyonel) */
+.dark-theme .sorting-group select {
+  background: #333;
+  color: white;
+  border: 2px solid #555;
+}
+
+/* 🌙 Koyu Mod Uyumluluğu */
+.dark-theme .sort-container select {
+  background: #333;
+  color: white;
+  border: 2px solid #555;
+}
+/* Koyu Mod İçin Genel Stil */
+.dark-theme {
+  background-color: #1e1e1e; /* Arka plan koyu renk */
+  color: white;
+}
+
+/* Liste Öğeleri İçin Koyu Mod */
+.dark-theme ul {
+  background: #2a2a2a; /* Liste arka planı */
+}
+
+.dark-theme li {
+  background: #333; /* Liste elemanlarının arka planı */
+  color: white; /* Yazı rengi beyaz olacak */
+  border: 1px solid #555; /* Hafif bir kenarlık ekleyerek ayrımı belirginleştir */
+}
+
+.dark-theme li span {
+  color: white; /* Metin rengi */
+}
+
+/* Input alanlarının arka planını ve yazı rengini değiştir */
+.dark-theme input {
+  background: #444;
+  color: white;
+  border: 2px solid #666;
+}
+
+.dark-theme input::placeholder {
+  color: #bbb;
+}
+
+/* Seçenek kutusu (Dropdown) Karanlık Mod */
+.dark-theme select {
+  background: #444;
+  color: white;
+  border: 2px solid #666;
+}
+
+/* Karanlık Mod Butonları */
+.dark-theme button {
+  background: #555;
+  color: white;
+}
+
+.dark-theme button:hover {
+  background: #777;
+}
+
+/* Silme ve düzenleme butonları için özel renk ayarı */
+.dark-theme .delete-btn {
+  background: linear-gradient(135deg, #ff5c75, #ff4e99);
+}
+
+.dark-theme .edit-btn {
+  background: linear-gradient(135deg, #4a90e2, #007bff);
+}
